@@ -1,5 +1,8 @@
 package com.example.tof;
 
+
+/* This is a java port of http://blog.ivank.net/fastest-gaussian-blur.html. */
+
 public class FastBlur {
 
     // Fast Gaussian blur
