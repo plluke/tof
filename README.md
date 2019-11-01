@@ -1,4 +1,6 @@
 # Time of Flight Camera Example 
+<p><img src="docs/demo.gif"/></p>
+
 This is an example app that demonstrates how to capture and process data from a Time of Flight camera, specifically the front-facing "3D Camera" on the Samsung S10 5G.
 
 ## How to Use
