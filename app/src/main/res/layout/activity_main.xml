@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF">
+
+            <TextureView
+                android:id="@+id/rawData"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextureView
+                android:id="@+id/noiseReduction"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextureView
+                android:id="@+id/movingAverage"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextureView
+                android:id="@+id/blurredAverage"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Raw Data"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="@+id/rawData"
+                app:layout_constraintStart_toStartOf="@+id/rawData"
+                app:layout_constraintTop_toBottomOf="@+id/rawData" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Noise Reduced (Blur)"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="@+id/noiseReduction"
+                app:layout_constraintStart_toStartOf="@+id/noiseReduction"
+                app:layout_constraintTop_toBottomOf="@+id/noiseReduction" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moving Average"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="@+id/movingAverage"
+                app:layout_constraintStart_toStartOf="@+id/movingAverage"
+                app:layout_constraintTop_toBottomOf="@+id/movingAverage" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blurred Moving Average"
+                android:textColor="@android:color/primary_text_light"
+                app:layout_constraintEnd_toEndOf="@+id/blurredAverage"
+                app:layout_constraintStart_toStartOf="@+id/blurredAverage"
+                app:layout_constraintTop_toBottomOf="@+id/blurredAverage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
